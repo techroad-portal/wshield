@@ -1,6 +1,4 @@
 import './App.css';
-import { withAuthenticator } from '@aws-amplify/ui-react';
-
 import { useState } from "react";
 import {Contact, Navbar, Header, Feature01, Feature02, Feature03, Feature04, FAQ, Feature05, Images, Feature06, Carousel, Testimonials, ContactInfo, UsefulLinks, Footer} from "./ui-components";
 import { DataStore } from '@aws-amplify/datastore';
@@ -14,12 +12,11 @@ function App() {
   // Create message
   const handleClick = async (e) => {
   e.preventDefault();
-  console.log({...formData});
+
      try {
-      await DataStore.save( 
-        new Message({...formData
-      })
-    );
+     const hello =  await DataStore.save( 
+        new Message({...formData}));
+      console.log(formData);
      } catch (error) {
        console.log(error);
      }
@@ -67,13 +64,12 @@ function App() {
       <ContactInfo/>
       <Contact // @ts-ignore
       overrides={ContactOverrides}style  = {{margin: "auto"}}/>
-
       <UsefulLinks/>
       <Footer/>
     </div>
   );
 }
 
-export default withAuthenticator(App);
+export default App;
 
 
