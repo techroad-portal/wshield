@@ -18,18 +18,32 @@ function App() {
         "type": "section",
         "text": {
           "type": "mrkdwn",
-          "text": `You have a new message:\n\n*<mailto:${formData.email}|${formData.name}>*\n\n`
+          "text": `You have a new message:\n\n Name: *<mailto:${formData.email}|${formData.name}>*`
         }
       },
       {
         "type": "section",
           "text": {
             "type": "mrkdwn",
-            "text": `${formData.message}`
+            "text": `Email: ${formData.email}`
           }
           
       },
-      
+      {
+        "type": "section",
+          "text": {
+            "type": "mrkdwn",
+            "text": `Website: <${formData.site}>`
+          }
+          
+      },
+      {
+        "type": "section",
+          "text": {
+            "type": "mrkdwn",
+            "text": `Message: \n\n${formData.message}`
+          }
+      },
       {
         "type": "divider"
       },
