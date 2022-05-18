@@ -9,7 +9,7 @@ const initialState = { name: "", email: "", site: "", message: "" };
 
 function App() {
   const [formData, setFormData] = useState(initialState);
-  const webhookURL ="https://hooks.slack.com/services/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";
+  const webhookURL =  process.env.WEBHOOK_URL;
 
   
   const payload = {
@@ -35,17 +35,15 @@ function App() {
       },
     ],
   };
-  // Create message
+  
   const handleClick = async (e) => {
-    
+
     e.preventDefault();
     try {
       const storeData = await DataStore.save(new Message({ ...formData }));
       if (storeData) {
-        const postMessage = await axios.post(webhookURL, JSON.stringify(payload));
-        console.log(postMessage);
+        await axios.post(webhookURL, JSON.stringify(payload));
       }else {
-        console.log(storeData);
       }
       console.log(postMessage);
 
