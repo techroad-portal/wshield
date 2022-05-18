@@ -1,0 +1,8 @@
+type Message @model @auth(rules: [{allow: public}, {allow: public, provider: iam}]) {
+  id: ID!
+  name: String
+  email: AWSEmail
+  site: AWSURL
+  message: String
+}
+ 

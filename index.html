@@ -715,11 +715,10 @@
         <div class="row">
             <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
                 <!--Formbuilder Form-->
-                <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="uNomskO9feHKtsD+9SBQSROX8E0H5J8P6OCkD7Toxy4rRMOv/1wR9ITGSGkdzUsViKujvT4tsmHhy7LD/e/XZOsqQ1NvJDDgvsTJRH84vN5uT+6FGGubnbr6+KPKu65l.x+FNRFdbcLFM0EQLb+4l1/mXhx0cuO2c9WJgHpYb2enOuzn4yYhAp8Rd3j7b3JPcEdv+1kp+mFeiwOKai5w+70eYgSLFvAyw5Lrtg9QxNJ/FPTMbQn1IPXzmfakzD+/3">
+                <form id = "message-form"  class="mbr-form form-with-styler" data-form-title="Form Name">
                     <div class="form-row">
-                        <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out
-                            the form!</div>
-                        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">Oops...! some
+                        <div hidden id = "success-message" class="alert alert-success col-12">Thanks for filling </div>
+                        <div hidden id = "error-message" class="alert alert-danger col-12">Oops...! some
                             problem!</div>
                     </div>
                     <div class="dragArea form-row">
@@ -739,7 +738,7 @@
                             <textarea name="textarea" placeholder="Message" data-form-field="textarea" class="form-control display-7" id="textarea-form01-c"></textarea>
                         </div>
                         <div class="col-lg-12 align-center col-md-12 col-sm-12">
-                            <button type="submit" class="btn btn-primary display-7">Send message</button>
+                            <button type="submit" id = "send-message" class="btn btn-primary display-7">Send message</button>
                         </div>
                     </div>
                 </form>
@@ -961,8 +960,7 @@
   <script src="assets/theme/js/script.js"></script>
   <script src="assets/slidervideo/script.js"></script>
   <script src="assets/formoid/formoid.min.js"></script>
-  
-  
+  <script type = "text/javascript" src="main.bundle.js"></script>
   
  <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>
     <input name="animation" type="hidden">

@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-wshieldapp-staging-230025-authRole",
+      "UnauthRoleArn": "arn:aws:iam::893351445705:role/amplify-wshieldapp-staging-230025-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::893351445705:role/amplify-wshieldapp-staging-230025-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-wshieldapp-staging-230025-deployment",
+      "UnauthRoleName": "amplify-wshieldapp-staging-230025-unauthRole",
+      "StackName": "amplify-wshieldapp-staging-230025",
+      "StackId": "arn:aws:cloudformation:us-west-2:893351445705:stack/amplify-wshieldapp-staging-230025/f9437f50-d56b-11ec-8206-02ef29eca5d7",
+      "AmplifyAppId": "d2en2xit9tnuzw"
+    },
+    "categories": {
+      "auth": {
+        "wshieldapp": {}
+      }
+    }
+  }
+}
